@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="A simple Dashboard showing the results from the brexit referendum 2016">
+    <meta name="author" content="Luigi Langella">
+
+    <title>Brexit Referendum Results</title>
+
+    <!-- Custom styles for this template-->
+    <link rel="stylesheet" href="static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="static/css/style.css">
+    <!-- dc.css library to display graphs-->
+    <link rel="stylesheet" href="static/css/dc.min.css">
+    <!-- Font awesome CDN-->
+    <script src="https://use.fontawesome.com/878be2af31.js"></script>
+    <!-- js script links to plot and display graphs-->
+    <script type="text/javascript" src="static/js/promise-polyfill.js"></script>
+    <script type="text/javascript" src="static/js/fetch.umd.js"></script>
+    <script type="text/javascript" src="static/js/d3.min.js"></script>
+    <script type="text/javascript" src="static/js/crossfilter.min.js"></script>
+    <script type="text/javascript" src="static/js/dc.min.js"></script>
+    <script type="text/javascript" src="static/js/queue.min.js"></script>
+    <script type="text/javascript" src="static/js/graph.js"></script>
+
+
+</head>
+
+<body id="page-top">
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+
+            <div class="navbar-header col-sm-12">
+                <a class="navbar-brand" href="index.html">Brexit Referendum Results</a>
+            </div>
+
+        </div>
+    </nav>
+
+
+    <div id="wrapper">
+
+        <div id="content-wrapper">
+
+            <div class="container-fluid">
+
+                <!-- Breadcrumbs-->
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">
+                        <a href="/index.html">Dashboard</a>
+                    </li>
+                </ol>
+                <!-- Area Chart -->
+                <div class="card mb-3">
+                    <div class="card-header">
+                        <div class="row">
+                            <div>
+                                <h3 class="col-md-12">Select The Region to see how they have voted.</h3>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6" id="select1"></div>
+
+                            <div class="col-md-6">
+                                <i class="fa fa-bar-chart"></i> Overview Results</div>
+                        </div>
+                    </div>
+
+                    <div class="row" id="section1">
+                        <div class="col-md-6" id="leave-regions"></div>
+                        <div class="col-md-6" id="remain-regions"></div>
+                    </div>
+                    <div class="row" id="section2">
+                        <div class="col-md-6" id="pie-chart">
+                            <blockquote>
+                                <p>This PieChart rappresents the percentage of people that turned up at the polls.</p>
+
+                            </blockquote>
+                        </div>
+                        <div class="col-md-6" id="row-chart">
+                            <blockquote>
+                                <p>In this RowChart you can see where in the country the vote 'Leave' or 'Remain' was predominant. </p>
+
+                            </blockquote>
+                        </div>
+                    </div>
+                    <div class="row" id="section3">
+                        <div class="col-md-7" id="stacked-chart"></div>
+                        <div class="col-md-5">
+                            <blockquote>
+                                <p>The United Kingdom European Union membership referendum, also known as the EU referendum, the European referendum and the Brexit referendum, took place on 23 June 2016 in the United Kingdom (UK) and Gibraltar to ask the
+                                    electorate if the country should remain a member of, or leave the European Union (EU), under the provisions of the European Union Referendum Act 2015 and also the Political Parties, Elections and Referendums Act 2000.
+                                    The referendum resulted in 51.9% of votes being in favour of leaving the EU (17,410,742 votes). </p>
+                            </blockquote>
+                        </div>
+                    </div>
+
+                </div>
+                <!-- /.container-fluid -->
+            </div>
+            <!-- Sticky Footer -->
+            <footer class="footer">
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="index.html">Brexit Referendum Results</a>
+                        </div>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="pull-right"><a href="#top">Back to top</a></li>
+                        </ul>
+
+                    </div>
+                </nav>
+                <div class="container">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright © Luigi Langella 2019</span>
+                    </div>
+                </div>
+            </footer>
+
+
+            <!-- /.content-wrapper -->
+        </div>
+        <!-- /#wrapper -->
+
+
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+h3 {
+    text-align: center;
+    margin-top: 21px;
+    margin-bottom: 40.5px;
+}
+
+.card-header:first-child {
+    text-align: inherit;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+*/ li.pull-right a {
+    font-size: 18px;
+    color: white;
+}
+
+#section1 {
+    padding-top: 35px;
+}
+
+#section2 {
+    padding-top: 35px;
+}
+
+#section3 {
+    padding-top: 35px;
+}
+
+@media (min-width: 992px) {
+    .col--md-5,
+    .col-md-6,
+    .col-md-7,
+    .col-md-12 {
+        float: right;
+        text-align: -webkit-center;
+    }
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #fff;
+}
+
+.axis text {
+    font-size: 13px;
+}
+
+svg text.label {
+    fill: white;
+    font: 15px;
+    font-weight: 400;
+    text-anchor: middle;
+}
+
+#leave-regions .axis.x .tick text {
+    text-anchor: end;
+    transform: rotate(-60deg) translate(-60px, -10px);
+}
+
+#remain-regions .axis.x .tick text {
+    text-anchor: end;
+    transform: rotate(-60deg) translate(-60px, -10px);
+}
+
+#stacked-chart .axis.x .tick text {
+    text-anchor: end;
+    transform: rotate(-60deg) translate(-60px, -10px);
+}
