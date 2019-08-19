@@ -152,7 +152,7 @@ function row_test(ndx) {
     dc.rowChart("#row-chart")
         .width(550)
         .height(350)
-        .x(d3.scale.linear().domain([6, 20]))
+        .x(d3.scale.linear())
         .elasticX(true)
         .dimension(dim)
         .group(group);
@@ -179,52 +179,3 @@ function stackedChart(ndx) {
         .legend(dc.legend().x(420).y(0).itemHeight(15).gap(5));
     stackedChart.margins().right = 100;
 }
-
-
-// function add_item(p, v) {
-//     p.count++;
-//     p.total += (v.Leave / v.Valid_Votes * 100);
-//     p.average = p.total / p.count;
-//     return p;
-// }
-
-// function remove_item(p, v) {
-//     p.count--;
-//     if (p.count == 0) {
-//         p.total = 0;
-//         p.average = 0;
-//     } else {
-//         p.total -= (v.Leave / v.Valid_Votes * 100);
-//         p.average = p.total / p.count;
-//     }
-//     return p;
-// }
-
-// function initialise() {
-//     return { count: 0, total: 0, average: 0 };
-// }
-
-// function add_item_R(p, v) {
-//     p.count++;
-//     p.total += (v.Remain / v.Valid_Votes * 100);
-//     p.average = p.total / p.count;
-//     return p;
-// }
-
-// function remove_item_R(p, v) {
-//     p.count--;
-//     if (p.count == 0) {
-//         p.total = 0;
-//         p.average = 0;
-//     } else {
-//         p.total -= (v.Remain / v.Valid_Votes * 100);
-//         p.average = p.total / p.count;
-//     }
-//     return p;
-// }
-
-// function initialise_R() {
-//     return { count: 0, total: 0, average: 0 };
-// }
-// var group_leave = dim.group().reduce(add_item, remove_item, initialise);
-// var group_remain = dim.group().reduce(add_item_R, remove_item_R, initialise_R);
