@@ -1,6 +1,6 @@
 queue()
     .defer(d3.csv, "data/EU-referendum-result-data.csv")
-    .await(makegraphs)
+    .await(makegraphs);
 
 function makegraphs(error, data) {
     var ndx = crossfilter(data);
@@ -39,23 +39,23 @@ function show_leave_regions(ndx) {
             p.count++;
             if (v.Leave > v.Remain) {
                 p.area_leave++;
-            } else { p.area_remain++ };
+            } else { p.area_remain++; }
             return p;
         },
         function remove_item(p, v) {
             p.count--;
             if (v.Leave > v.Remain) {
                 p.area_leave--;
-            } else { p.area_remain-- };
+            } else { p.area_remain--; }
             return p;
         },
         function initialise() {
-            return { count: 0, area_leave: 0, area_remain: 0 }
+            return { count: 0, area_leave: 0, area_remain: 0 };
         }
     );
 
 
-    var chart = dc.barChart("#leave-regions")
+    var chart = dc.barChart("#leave-regions");
     chart
         .width(600)
         .height(300)
@@ -70,7 +70,7 @@ function show_leave_regions(ndx) {
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .yAxisLabel("Leave Areas by Region")
-        .yAxis().ticks(5)
+        .yAxis().ticks(5);
 }
 
 function show_remain_regions(ndx) {
@@ -80,23 +80,23 @@ function show_remain_regions(ndx) {
             p.count++;
             if (v.Leave > v.Remain) {
                 p.area_leave++;
-            } else { p.area_remain++ };
+            } else { p.area_remain++; }
             return p;
         },
         function remove_item(p, v) {
             p.count--;
             if (v.Leave > v.Remain) {
                 p.area_leave--;
-            } else { p.area_remain-- };
+            } else { p.area_remain--; }
             return p;
         },
         function initialise() {
-            return { count: 0, area_leave: 0, area_remain: 0 }
+            return { count: 0, area_leave: 0, area_remain: 0 };
         }
     );
 
 
-    var chart = dc.barChart("#remain-regions")
+    var chart = dc.barChart("#remain-regions");
     chart
         .width(600)
         .height(300)
@@ -111,15 +111,21 @@ function show_remain_regions(ndx) {
         .x(d3.scale.ordinal())
         .xUnits(dc.units.ordinal)
         .yAxisLabel("Remain Area by Region")
-        .yAxis().ticks(5)
+        .yAxis().ticks(5);
 }
 
 function show_percentage_leave_remain(ndx) {
     var dim = ndx.dimension(dc.pluck("Region"));
-    var group = dim.group().reduceSum(function(d) {
-        return [d.Pct_Turnout / [d.Area].length];
+    var area_number_by_region = dim.group().reduceSum(function(d) {
+        return [d.Area].length;
     });
-    console.log(group.all());
+    console.log(area_number_by_region.all());
+    var percentage_turnout_by_region = dim.group().reduceSum(function(d) {
+        return [d.Pct_Turnout];
+    });
+    console.log(percentage_turnout_by_region.all());
+
+    var group = dim.group().reduceCount(percentage_turnout_by_region / area_number_by_region);
 
     dc.pieChart("#pie-chart")
 
@@ -149,7 +155,7 @@ function row_test(ndx) {
         .x(d3.scale.linear().domain([6, 20]))
         .elasticX(true)
         .dimension(dim)
-        .group(group)
+        .group(group);
 
 }
 
