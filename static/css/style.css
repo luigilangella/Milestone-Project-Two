@@ -32,8 +32,8 @@ i.fa.fa-repeat {
     padding-top: 35px;
 }
 
-@media (min-width: 992px) {
-    .col--md-5,
+@media screen and (min-width: 992px) {
+    .col-md-5,
     .col-md-6,
     .col-md-7,
     .col-md-12 {

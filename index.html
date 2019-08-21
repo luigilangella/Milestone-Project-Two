@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
     <meta name="description" content="A simple Dashboard showing the results from the brexit referendum 2016">
     <meta name="author" content="Luigi Langella">
 
@@ -19,33 +19,24 @@
     <!-- Font awesome CDN-->
     <script src="https://use.fontawesome.com/878be2af31.js"></script>
     <!-- js script links to plot and display graphs-->
-    <script type="text/javascript" src="static/js/promise-polyfill.js"></script>
-    <script type="text/javascript" src="static/js/fetch.umd.js"></script>
     <script type="text/javascript" src="static/js/d3.min.js"></script>
     <script type="text/javascript" src="static/js/crossfilter.min.js"></script>
     <script type="text/javascript" src="static/js/dc.min.js"></script>
     <script type="text/javascript" src="static/js/queue.min.js"></script>
     <script type="text/javascript" src="static/js/graph.js"></script>
 
-
 </head>
 
 <body id="page-top">
     <nav class="navbar navbar-default">
         <div class="container-fluid">
-
             <div class="navbar-header col-sm-12">
-                <a class="navbar-brand" href="index.html">Brexit Referendum Results</a>
+                <a class="navbar-brand" href="index.html">Brexit Referendum Results June 2016</a>
             </div>
-
         </div>
     </nav>
-
-
     <div id="wrapper">
-
         <div id="content-wrapper">
-
             <div class="container-fluid">
 
                 <!-- Breadcrumbs-->
@@ -56,10 +47,15 @@
                     <a class="reset" href="javascript:dc.filterAll();dc.redrawAll();">reset</a>
                     <i class="fa fa-repeat"></i>
                 </ol>
+
                 <!-- Area Chart -->
                 <div class="card mb-3">
                     <div class="card-header">
                         <div class="row">
+                            <div>
+                                <h4 class="col-md-12">Of the 381 voting areas in Great Britain and Gibraltar and the 18 Northern Ireland parliamentary constituencies a total of 270 returned majority votes in favour of "Leave" whereas 129 returned majority votes in favour of
+                                    "Remain" in the referendum including all 32 areas in Scotland.</h4>
+                            </div>
                             <div>
                                 <h3 class="col-md-12">Select The Region to see how they have voted.</h3>
                             </div>
@@ -80,13 +76,11 @@
                         <div class="col-md-6" id="pie-chart">
                             <blockquote>
                                 <p>This PieChart rappresents the percentage of people that turned up at the polls.</p>
-
                             </blockquote>
                         </div>
                         <div class="col-md-6" id="row-chart">
                             <blockquote>
                                 <p>In this RowChart you can see where in the country the vote 'Leave' or 'Remain' was predominant. </p>
-
                             </blockquote>
                         </div>
                     </div>
@@ -100,22 +94,20 @@
                             </blockquote>
                         </div>
                     </div>
-
                 </div>
-                <!-- /.container-fluid -->
             </div>
+            <!-- /.container-fluid -->
+
             <!-- Sticky Footer -->
             <footer class="footer">
                 <nav class="navbar navbar-default">
                     <div class="container-fluid">
-
                         <div class="navbar-header">
                             <a class="navbar-brand" href="index.html">Brexit Referendum Results</a>
                         </div>
                         <ul class="nav navbar-nav navbar-right">
                             <li class="pull-right"><a href="#top">Back to top</a></li>
                         </ul>
-
                     </div>
                 </nav>
                 <div class="container">
@@ -124,15 +116,10 @@
                     </div>
                 </div>
             </footer>
-
-
             <!-- /.content-wrapper -->
         </div>
-        <!-- /#wrapper -->
-
-
     </div>
-
+    <!-- /#wrapper -->
 
 </body>
 

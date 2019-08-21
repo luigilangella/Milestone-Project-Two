@@ -119,11 +119,9 @@ function show_percentage_leave_remain(ndx) {
     var area_number_by_region = dim.group().reduceSum(function(d) {
         return [d.Area].length;
     });
-    console.log(area_number_by_region.all());
     var percentage_turnout_by_region = dim.group().reduceSum(function(d) {
         return [d.Pct_Turnout];
     });
-    console.log(percentage_turnout_by_region.all());
 
     var group = dim.group().reduceCount(percentage_turnout_by_region / area_number_by_region);
 
