@@ -55,7 +55,7 @@ function show_leave_regions(ndx) {
     );
 
 
-    var chart = dc.barChart("#leave-regions");
+    chart = dc.barChart("#leave-regions");
     chart
         .width(600)
         .height(300)
