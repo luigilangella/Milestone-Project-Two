@@ -14,7 +14,7 @@ A live demo can be found [here](https://luigilangella.github.io/Milestone-Projec
 ### Wireframes
 
 The wireframe i designed reflects very much what the end product is, a simple to navigate dashboard with all the informations needed to make it usefull.
-![wireframe2.png](/mockup.png)
+![wireframe2.png](/images/mockup.png)
 
 ## Features
 A brief introduction to the referendum, a select button to choose the region of interest, 5 different charts to compare diverse aspect of the vote, a reset button and a toTop button to return to the top of the page.
