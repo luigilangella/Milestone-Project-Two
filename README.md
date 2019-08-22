@@ -62,6 +62,9 @@ I used this technology for its framework and the grid system, which helped make 
 
 ## Testing
  This site was tested across multiple browsers (Chrome, Safari, Internet Explorer, FireFox) and on multiple mobile devices (iPhone 4, 5, 7: Chrome and Safari, iPad, Samsung Galaxy) to ensure compatibility and responsiveness. Most of the styling and coding was done with the help of the Crome Developer Tools, then implemented in Visual Studio Code.
+ The HTML5 was tested with a markup [validation service](https://validator.w3.org/).
+ The CSS3 was tested with a CSS [validation service](https://jigsaw.w3.org/css-validator/)
+ The javascript was tested with jslint and its free from errors except for the one it shows due to lack of compatibility with dc.js but the code is working fine.
 
 ## Deployment
 This site is hosted using GitHub pages, deployed directly from the master branch. The deployed site will update automatically upon new commits to the master branch. In order for the site to deploy correctly on GitHub pages, the landing page must be named `index.html`.
