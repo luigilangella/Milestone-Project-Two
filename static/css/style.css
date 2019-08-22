@@ -1,3 +1,5 @@
+/* Custom styles for the main page typography */
+
 h3 {
     text-align: center;
     margin-top: 21px;
@@ -20,6 +22,9 @@ i.fa.fa-repeat {
     color: tomato;
 }
 
+
+/* Padding for the three graphs sections */
+
 #section1 {
     padding-top: 35px;
 }
@@ -32,15 +37,8 @@ i.fa.fa-repeat {
     padding-top: 35px;
 }
 
-@media screen and (min-width: 992px) {
-    .col-md-5,
-    .col-md-6,
-    .col-md-7,
-    .col-md-12 {
-        float: right;
-        text-align: -webkit-center;
-    }
-}
+
+/* Adjustments for graphs typography */
 
 .axis path,
 .axis line {
@@ -72,4 +70,17 @@ svg text.label {
 #stacked-chart .axis.x .tick text {
     text-anchor: end;
     transform: rotate(-60deg) translate(-60px, -10px);
+}
+
+
+/* Media Query */
+
+@media screen and (min-width: 992px) {
+    .col-md-5,
+    .col-md-6,
+    .col-md-7,
+    .col-md-12 {
+        float: right;
+        text-align: -webkit-center;
+    }
 }
